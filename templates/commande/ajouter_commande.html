@@ -1,0 +1,16 @@
+{% extends 'main.html' %}
+
+{% block contenu %}
+    <div class="card rounded col-md-6 m-auto mt-4 shadow">
+        <div class="card-header">
+            <h1 class="text-center">Ajouter une commande</h1>
+        </div>
+        <div class="card-body">
+            <form action='' method='POST'>
+                {% csrf_token %}
+                {{form}}
+                <input type='submit' name='Envoyer' class='btn btn-primary'/>
+            </form>
+        </div>
+    </div>
+{% endblock %}
